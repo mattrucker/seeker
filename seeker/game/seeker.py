@@ -1,7 +1,10 @@
 # TODO: Implement the Seeker class as follows...
 
 # 1) Add the class declaration. Use the following class comment.
+from game.terminal_service import TerminalService
 
+
+class Seeker:
     """The person looking for the Hider. 
     
     The responsibility of a Seeker is to keep track of its location and distance travelled.
@@ -11,11 +14,12 @@
     """
 
 # 2) Create the class constructor. Use the following method comment.
-        """Constructs a new Seeker.
-
-        Args:
-            self (Seeker): An instance of Seeker.
-        """
+    """Constructs a new Seeker.
+    Args:
+        self (Seeker): An instance of Seeker.
+    """
+    def __init__(self):
+        self._seeker_location = 0
        
 # 3) Create the get_location(self) method. Use the following method comment.
         """Gets the current location.
@@ -23,6 +27,9 @@
         Returns:
             number: The current location,
         """
+    def get_location(self):
+        return self._seeker_location
+
         
 # 4) Create the move_location(self, location) method. Use the following method comment.
         """Moves to the given location.
@@ -31,3 +38,5 @@
             self (Seeker): An instance of Seeker.
             location (int): The given location.
         """
+    def move_location(self, location):
+        self._seeker_location = location
